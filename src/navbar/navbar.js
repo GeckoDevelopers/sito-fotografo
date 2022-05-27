@@ -1,15 +1,15 @@
 import './navbar.scss';
 import BurgerMenu from '../components/burgerMenu/burgerMenu';
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export default function Navbar() {
 
 
   return(
-    <nav>
+    <nav id='navbar'>
+      <div id='logoNav'></div>
       <BurgerMenu/>
-      <h1>akshbdjashbdkajsdh</h1>
     </nav>
   );
 };

@@ -1,22 +1,8 @@
 #burgermenu {
-  display: flex;
-  justify-content: flex-end;
-  ul {
+  .linkContainer {
     display: flex;
     li {
       margin: 0 20px;
-      list-style: none;
-    }
-    .expandedMenu{
-      .nameAndArrow {
-        display: flex;
-        flex-direction: column;
-      }
-      .dropDownMenu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-      }
     }
   }
 }
