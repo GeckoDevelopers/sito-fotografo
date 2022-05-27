@@ -1,0 +1,21 @@
+#burgermenu {
+  ul {
+    display: flex;
+  }
+  .expandedLi{
+    .nameAndArrow {
+      display: flex;
+      flex-direction: column;
+    }
+    .dropDownMenu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: red;
+    }
+  }
+
+  #servicesMenu {
+    display: contents !important;
+  }
+}
