@@ -1,0 +1,57 @@
+@import '../../var.scss';
+
+#navbar {
+  .nav_filler { // previene la navbar dal coprire elementi a inizio pagina
+    width: 100%;
+    height: $heightNav;
+  }
+  .nav_fixed {
+    position: fixed;
+    top: 0; // senza salta in basso di un tot per qualche motivo
+    width: 100vw;
+    height: $heightNav;
+    background-color: wheat;
+    display: flex;
+    justify-content: space-evenly;
+    /*  
+      ricorda, l'altezza ora è data dalla variabile in index
+      anche per i menu a tendina l'altezza ora è data dalla variabile in index
+    */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  #home, #slides {
+    padding-left: $widthNav;
+  }
+  #navbar {
+    .nav_filler { // previene la navbar dal coprire elementi a inizio pagina
+      width: 0;
+      height: 0;
+    }
+    .nav_fixed {
+      position: fixed;
+      top: 0; // senza salta in basso di un tot per qualche motivo
+      width: $widthNav;
+      height: 100%;
+      background-color: wheat;
+      display: flex;
+      justify-content: space-evenly;
+      /*  
+        ricorda, l'altezza ora è data dalla variabile in index
+        anche per i menu a tendina l'altezza ora è data dalla variabile in index
+      */
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+}

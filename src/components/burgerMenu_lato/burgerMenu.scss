@@ -1,0 +1,130 @@
+@import '../../var.scss';
+
+#burgermenu {
+  background-color: aliceblue;
+  .linkContainer {
+    position: absolute;
+    top: $heightNav;
+    left: -100%;
+    width: 100%;
+    background-color: antiquewhite;
+    transition: 0.3s;
+    height: calc(100vh - $heightNav);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    &.active {
+      left: 0;
+    }
+    .decoration {
+      padding-right: 5px;
+    }
+    li {
+      width: 100%;
+      padding: 15px 0;
+      border-bottom: 1px solid lightgrey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a, Link {
+        color: black;
+      }
+    }
+    .expandedMenu {
+      .dropDownMenu {
+        position: fixed;
+        height: calc(100vh - $heightNav);
+        width: 100%;
+        top: $heightNav;
+        left: -102%;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: beige;
+        &.active {
+          left: 0;
+        }
+      }
+    }
+  }
+  .hamburger {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 35px;
+    div {
+      // linee menù compresso smartphone
+      background-color: black;
+      height: 3px;
+      width: 20px;
+      margin-top: 3px;
+      border-radius: 7px;
+      margin-left: auto;
+      transition: transform 0.4s;
+    }
+    // posizione iniziale
+    .line1 {
+      transform: rotate(-65deg) translate(-11px, -12px);
+    }
+    .line2 {
+      transform: rotate(-65deg) translate(-2px, -7px);
+    }
+    .line3 {
+      transform: rotate(-65deg) translate(7px, -2px);
+    }
+    .line1.active {
+      transform: translateY(5px) rotate(45deg);
+    }
+    // posizione finale
+    .line2.active {
+      opacity: 0;
+    }
+    .line3.active {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  #burgermenu {
+    .linkContainer {
+      background-color: aliceblue;
+      position: static;
+      top: auto;
+      left: auto;
+      width: auto;
+      height: 85vh;
+      display: flex;
+      li {
+        margin: 0;
+        padding: 0 20px;
+        border-bottom: 0;
+        justify-content: flex-start;
+      }
+      .expandedMenu {
+        .nameAndArrow {
+          display: flex;
+          .fas {
+            padding: 0 5px;
+          }
+        }
+        .dropDownMenu {
+          height: 100vh;
+          width: calc(100vw - $widthNav);
+          margin-left: $widthNav; 
+          top: 0;
+          li {
+            justify-content: center;
+          }
+        }
+      }
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+}
