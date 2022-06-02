@@ -1,9 +1,9 @@
 import "./slides.scss";
-import Slider from '../../components/slider_no_swipe/slider'
-import Gallery from '../../components/slider_no_swipe/gallery';
+import Slider from './slider'
+import Gallery from './gallery';
 import React, { useState } from "react";
 
-export default function Slides(){
+export default function Slides_view(){
 
   const [contatore, setContatore] = useState(true);
   

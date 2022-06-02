@@ -1,0 +1,36 @@
+#gallery {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .carosello {
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 20px 0;
+  }
+  .flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 25px;
+
+    .dot {
+      height: 20px;
+      width: 20px;
+      background-color: gray;
+      border-radius: 50%;
+    }
+    .active {
+      background-color: aqua;
+    }
+  }
+  .arrow {
+    width: 200px;
+    height: 45px;
+    background-color: red;
+    border-radius: 50px;
+  }
+}
