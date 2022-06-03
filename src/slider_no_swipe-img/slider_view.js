@@ -69,15 +69,15 @@ export default function Slider_view(){
 
   // display del carosello
 	var immagine = [
-    <p>{datas[contatore]?.text}</p>,
-    <img alt="mi fai schifo" className="carosello" src={datas[contatore]?.image} />
+    <p className="img_description">{datas[contatore]?.text}</p>,
+    <img alt="immagine mancante" className="carosello" src={datas[contatore]?.image} />
   ]
 
 
   // display della gallery
   var gallery = [];
 	for (let i = 0; i < datas.length; i++) {
-		gallery.push(<img alt="mi fai schifo la vendetta" className="carosello" src={datas[i]?.image} />);
+		gallery.push(<img alt="immagine mancante la vendetta" className="gallery-img" src={datas[i]?.image} />);
 	}
 
 
@@ -99,33 +99,31 @@ export default function Slider_view(){
 
   
   return(
-    <section id="slider_view-img">
+    <section id="imageViewer">
       <div className="container">
-        <section id="slider-img">
 
-          <div className="show" onClick={changeContatore}>{show}</div>
+        <div className="show" onClick={changeContatore}>{show}</div>
 
-          {trueFolse 
-            ?
-            <div>
-              {immagine[0]}
-              <div className="img-container" onClick={nextImg}>
-                {immagine[1]}
-              </div>
+        {trueFolse 
+        ?
+        <div className="slider">
+          {immagine[0]}
+          <div className="img-container" onClick={nextImg}>
+            {immagine[1]}
+          </div>
 
-              <div className="flex">
-                <div className="arrow" onClick={prevImg}></div>
-                {dot}
-                <div className="arrow" onClick={nextImg}></div>
-              </div>
-            </div>
-            : 
-            <div id="gallery-img">
-              {gallery}
-            </div>
-          }
+          <div className="slider-comands">
+            <div className="arrow" onClick={prevImg}></div>
+            {dot}
+            <div className="arrow" onClick={nextImg}></div>
+          </div>
+        </div>
+        : 
+        <div className="gallery">
+          {gallery}
+        </div>
+        }
 
-        </section>
       </div>
     </section>
   )
