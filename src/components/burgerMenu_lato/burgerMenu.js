@@ -50,7 +50,7 @@ export default function BurgerMenu_mobile_first() {
     <section id="burgermenu">
       <ul className="linkContainer">
         <li onClick={closeMenudaiLink}><span className="decoration">/</span><Link onClick={scrollUp} to="/">Home</Link></li>
-        <li onClick={closeMenudaiLink}><span className="decoration">/</span><Link onClick={scrollUp} to="/scilia">Sicilia</Link></li>
+        <li onClick={closeMenudaiLink}><span className="decoration">/</span><Link onClick={scrollUp} to="/sicilia">Sicilia</Link></li>
         <li onClick={closeMenudaiLink}><span className="decoration">/</span><Link onClick={scrollUp} to="/casual">Casual</Link></li>
       </ul>
       <div className="hamburger flex" onClick={() => {animazioneBurgherMenu();closeMenu();}}>
