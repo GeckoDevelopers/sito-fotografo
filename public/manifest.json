@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "_short_name": "React App",
+  "name": "Gecko Developers",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,18 +8,58 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "_src": "logo192.png",
+      "_type": "image/png",
+      "_sizes": "192x192"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
+      "_src": "logo512.png",
+      "_type": "image/png",
+      "_sizes": "512x512"
+    },
+
+
+    {
+      "_src": "\/android-icon-36x36.png",
+      "_sizes": "36x36",
+      "_type": "image\/png",
+      "_density": "0.75"
+     },
+     {
+      "_src": "\/android-icon-48x48.png",
+      "_sizes": "48x48",
+      "_type": "image\/png",
+      "_density": "1.0"
+     },
+     {
+      "_src": "\/android-icon-72x72.png",
+      "_sizes": "72x72",
+      "_type": "image\/png",
+      "_density": "1.5"
+     },
+     {
+      "_src": "\/android-icon-96x96.png",
+      "_sizes": "96x96",
+      "_type": "image\/png",
+      "_density": "2.0"
+     },
+     {
+      "_src": "\/android-icon-144x144.png",
+      "_sizes": "144x144",
+      "_type": "image\/png",
+      "_density": "3.0"
+     },
+     {
+      "_src": "\/android-icon-192x192.png",
+      "_sizes": "192x192",
+      "_type": "image\/png",
+      "_density": "4.0"
+     }
+
+
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "_start_url": ".",
+  "_display": "standalone",
+  "_theme_color": "#000000",
+  "_background_color": "#ffffff"
 }
