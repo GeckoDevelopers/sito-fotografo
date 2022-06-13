@@ -25,39 +25,44 @@ export default function Slider({data}){
 	function fraDots(i) {
 		setContatore(i);
 	}
-  // frecce minus
-  function prevImg() {
+    // frecce minus
+    function prevImg() {
 		if (contatore === 0) {
 			setContatore(datas.length - 1);
 		} else {
 			setContatore(contatore - 1);
 		}
 	}
+    function getImageById(immageId) {
+        console.log(immageId, "immageId");
+        setTrueFolse(true);
+        setContatore(immageId)
+    }
 
 
   // display del carosello
-	var immagine = [
+  var immagine = [
     <p className="img_description">{datas[contatore]?.text}</p>,
     <img alt="immagine mancante" className="carosello" src={datas[contatore]?.image} />
-  ]
+]
 
 
   // display della gallery
   var gallery = [];
 	for (let i = 0; i < datas.length; i++) {
-		gallery.push(<img alt="immagine mancante la vendetta" className="gallery-img" src={datas[i]?.image} />);
+		gallery.push(<img alt="immagine mancante la vendetta" className="gallery-img" src={datas[i]?.image} onClick={() => getImageById(i)} />);
 	}
 
 
   // bottone gallery/slider che cambia testo
-  const [trueFolse, setTrueFolse] = useState(true);
-  if (trueFolse) {
+  const [trueFalse, setTrueFolse] = useState(true);
+  if (trueFalse) {
     var show = "Show Gallery"
   } else {
     var show = "Show Slider"
   }
   function changeContatore() {
-    if (trueFolse) {
+    if (trueFalse) {
       setTrueFolse(false)
     } else {
       setTrueFolse(true)
@@ -72,7 +77,7 @@ export default function Slider({data}){
 
         <div className="show" onClick={changeContatore}>{show}</div>
 
-        {trueFolse 
+        {trueFalse 
         ?
         <div className="slider">
           {immagine[0]}
