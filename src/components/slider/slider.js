@@ -9,42 +9,18 @@ export default function Slider({data}){
   // SERVE PER I DISCORSI DI PATH DEI LINK
   const location = useLocation();
 
-  // funzioni per il cambio immagine nel carosello
-	function nextImg() {
-		if (contatore >= datas.length - 1) {
-			setContatore(0);
-		} else {
-			setContatore(contatore + 1);
-		}
-	}
+
 	// dots fra version
 	var dot = [];
 	for (let i = 0; i < datas.length; i++) {
 		dot.push(<div className={(contatore === i)?"active dot":"dot"} onClick={() => fraDots(i)}></div>);
 	}
-	function fraDots(i) {
-		setContatore(i);
-	}
-    // frecce minus
-    function prevImg() {
-		if (contatore === 0) {
-			setContatore(datas.length - 1);
-		} else {
-			setContatore(contatore - 1);
-		}
-	}
-    function getImageById(immageId) {
-        console.log(immageId, "immageId");
-        setTrueFolse(true);
-        setContatore(immageId)
-    }
-
 
   // display del carosello
   var immagine = [
-    <p className="img_description">{datas[contatore]?.text}</p>,
-    <img alt="immagine mancante" className="carosello" src={datas[contatore]?.image} />
-]
+		<p className="img_description">{datas[contatore]?.text}</p>,
+		<img alt="immagine mancante" className="carosello" src={datas[contatore]?.image} />
+  ]
 
 
   // display della gallery
@@ -53,7 +29,6 @@ export default function Slider({data}){
 		gallery.push(<img alt="immagine mancante la vendetta" className="gallery-img" src={datas[i]?.image} onClick={() => getImageById(i)} />);
 	}
 
-
   // bottone gallery/slider che cambia testo
   const [trueFalse, setTrueFolse] = useState(true);
   if (trueFalse) {
@@ -61,6 +36,8 @@ export default function Slider({data}){
   } else {
     var show = "Show Slider"
   }
+  
+  //#region funzioni
   function changeContatore() {
     if (trueFalse) {
       setTrueFolse(false)
@@ -69,7 +46,33 @@ export default function Slider({data}){
     }
   }
 
+    function getImageById(immageId) {
+        console.log(immageId, "immageId");
+        setTrueFolse(true);
+        setContatore(immageId)
+    }
 
+    function fraDots(i) {
+        setContatore(i);
+    }
+    // frecce minus
+    function prevImg() {
+        if (contatore === 0) {
+            setContatore(datas.length - 1);
+        } else {
+            setContatore(contatore - 1);
+        }
+    }
+
+  // funzioni per il cambio immagine nel carosello
+    function nextImg() {
+        if (contatore >= datas.length - 1) {
+            setContatore(0);
+        } else {
+            setContatore(contatore + 1);
+        }
+    }
+  //#endregion
   
   return(
     <section id="imageViewer">
