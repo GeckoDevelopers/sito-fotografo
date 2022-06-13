@@ -1,6 +1,6 @@
 import './navbar.scss';
-import BurgerMenu_lato from '../../components/burgerMenu_lato/burgerMenu';
-import LogoNav from '../../components/logoNav/logoNav';
+import BurgerMenu_lato from '../burgerMenu_lato/burgerMenu';
+import LogoNav from '../logoNav/logoNav';
 
 /*  
   ricorda, l'altezza ora è data dalla variabile in index

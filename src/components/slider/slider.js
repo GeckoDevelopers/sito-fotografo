@@ -1,45 +1,13 @@
-import "./slider_view.scss";
+import "./slider.scss";
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import { sliderData as home } from "./datas/homeData";
-import { sliderData as sicilia } from "./datas/siciliaData";
-import { sliderData as casuale } from "./datas/casualeData";
-import { sliderData as test } from "./datas/testData";
-
-
-export default function Slider_view(){
+export default function Slider({data}){
 
   const [contatore, setContatore] = useState(0);
-
+  var datas = data
   // SERVE PER I DISCORSI DI PATH DEI LINK
   const location = useLocation();
-
-
-  // cambio della path
-  switch (location.pathname) {
-    case "/":
-      /* console.log("pat /home"); */
-      var datas = home
-      break;
-    case "/sicilia":
-      /* console.log("pat /sicilia"); */
-      var datas = sicilia
-      break;
-    case "/casuale":
-      /* console.log("pat /casuale"); */
-      var datas = casuale
-      break;
-    case "/test":
-      /* console.log("pat /test"); */
-      var datas = test
-      break;
-    default:
-      /* console.log("sei stronzo. tu non sai perche ma javascript si"); */
-      break;
-  }
-
-
 
   // funzioni per il cambio immagine nel carosello
 	function nextImg() {

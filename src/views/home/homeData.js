@@ -1,4 +1,4 @@
-export  const sliderData = [
+export const sliderData = [
   {
     image: "./img/home/workinprogress1.webp",
     alt: "Work in Progress",
