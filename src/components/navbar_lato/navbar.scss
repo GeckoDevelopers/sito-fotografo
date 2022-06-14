@@ -26,9 +26,6 @@
 }
 
 @media all and (min-width: 1024px) {
-  #imageViewer {
-    padding-left: $widthNav;
-  }
   #navbar {
     .nav_filler { // previene la navbar dal coprire elementi a inizio pagina
       width: 0;

@@ -15,3 +15,11 @@ body {
 .container {
   width: 80%;
 }
+
+@import './var.scss';
+
+@media all and (min-width: 1024px) {
+  #navbarSpacing {
+    padding-left: $widthNav;
+  }
+}

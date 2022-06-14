@@ -1,5 +1,11 @@
 export  const sliderData = [
   {
+    image: "./img/home/workinprogress3.webp",
+    alt: "Work in Progress",
+    text: "Coming Soon",
+    id: 3,
+  },
+  {
     image: "./img/casuale/colline.jpg",
     alt: "Work in Progress",
     text: "Work in progress",
@@ -17,10 +23,4 @@ export  const sliderData = [
     text: "Almost there, stay tuned",
     id: 2,
   },
-  {
-    image: "./img/home/workinprogress1.webp",
-    alt: "Work in Progress",
-    text: "Coming Soon",
-    id: 3,
-  }
 ]
