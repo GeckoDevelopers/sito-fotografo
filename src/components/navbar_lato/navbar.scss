@@ -10,9 +10,10 @@
     top: 0; // senza salta in basso di un tot per qualche motivo
     width: 100vw;
     height: $heightNav;
-    background-color: wheat;
+    background-color: $bg-color;
     display: flex;
     justify-content: space-evenly;
+    
     /*  
       ricorda, l'altezza ora è data dalla variabile in index
       anche per i menu a tendina l'altezza ora è data dalla variabile in index
@@ -36,7 +37,7 @@
       top: 0; // senza salta in basso di un tot per qualche motivo
       width: $widthNav;
       height: 100%;
-      background-color: wheat;
+      background-color: $bg-color;
       display: flex;
       justify-content: space-evenly;
       /*  

@@ -8,16 +8,9 @@ export default function Navbar() {
 
   return(
     <section id='logoNav'>
-      {location.pathname === "/" 
-        ? 
-        <a href="#home">
-          <img src="img/gecko-nav-v2.png" alt="" />
-        </a>
-        :
         <Link to="/" className="carta">
-          <img src="img/gecko-nav-v2.png" alt="" />
+          <h1>Carlo Livio Photo-gallery</h1>
         </Link>
-      }
     </section>
   );
 };

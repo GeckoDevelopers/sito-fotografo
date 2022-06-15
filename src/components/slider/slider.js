@@ -76,7 +76,7 @@ export default function Slider({data}){
   
   return(
     <section id="imageViewer">
-      <div className="container">
+      <div className="container-slider">
 
         <div className="show" onClick={changeContatore}>{show}</div>
 
@@ -89,9 +89,13 @@ export default function Slider({data}){
           </div>
 
           <div className="slider-comands">
-            <div className="arrow" onClick={prevImg}></div>
+            <div className="arrow" onClick={prevImg}>
+              <i class="fa-solid fa-chevron-left"></i>
+            </div>
             {dot}
-            <div className="arrow" onClick={nextImg}></div>
+            <div className="arrow" onClick={nextImg}>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
           </div>
         </div>
         : 

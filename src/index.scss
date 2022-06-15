@@ -1,3 +1,5 @@
+@import './var.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -8,15 +10,14 @@
 }
 
 body {
-  background-color: rgb(41, 41, 41);
-  color: white;
+  background-color: $bg-color;
+  color: $colori-scritte;
 }
 
 .container {
   width: 80%;
 }
 
-@import './var.scss';
 
 @media all and (min-width: 1024px) {
   #navbarSpacing {

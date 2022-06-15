@@ -1,13 +1,13 @@
 @import '../../var.scss';
 
 #burgermenu {
-  background-color: aliceblue;
+  background-color: $bg-color;
   .linkContainer {
     position: absolute;
     top: $heightNav;
     left: -100%;
     width: 100%;
-    background-color: antiquewhite;
+    background-color: $bg-color;
     transition: 0.3s;
     height: calc(100vh - $heightNav);
     display: flex;
@@ -23,12 +23,13 @@
     li {
       width: 100%;
       padding: 15px 0;
-      border-bottom: 1px solid lightgrey;
+      border-bottom: 1px solid white;
       display: flex;
       justify-content: center;
       align-items: center;
       a, Link {
-        color: black;
+        color: $colori-scritte;
+        font-size: 20px;
       }
     }
     .expandedMenu {
@@ -58,7 +59,7 @@
     width: 35px;
     div {
       // linee menù compresso smartphone
-      background-color: black;
+      background-color: $colori-scritte;
       height: 3px;
       width: 20px;
       margin-top: 3px;
@@ -92,7 +93,7 @@
 @media all and (min-width: 1024px) {
   #burgermenu {
     .linkContainer {
-      background-color: aliceblue;
+      background-color: $bg-color;
       position: static;
       top: auto;
       left: auto;

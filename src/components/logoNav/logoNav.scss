@@ -1,12 +1,24 @@
 @import '../../var.scss';
 
 #logoNav {
+  width: 80%;
   height: $heightNav;
   background-color: chocolate;
   display: flex;
   align-items: center;
-  img {
+  justify-content: center;
+  background-color: $bg-color;
+  a {
+    h1 {
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      font-size: 26px;
+    }
+    
+  }
+  /* img {
     width: 100px;
     cursor: pointer;
-  }
+  } */
 }
