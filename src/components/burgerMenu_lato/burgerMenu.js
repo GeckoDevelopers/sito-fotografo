@@ -66,10 +66,10 @@ export default function BurgerMenu_mobile_first() {
           <Link onClick={scrollUp} to="/test">test</Link>
         </li>
         <br />
-        <li onClick={closeMenudaiLink}>
+        {/* <li onClick={closeMenudaiLink}>
           <span className="decoration"></span>
           <Link onClick={scrollUp} to="/bioinfo">Biografia</Link>
-          </li>
+        </li> */}
         <li onClick={closeMenudaiLink}>
           <span className="decoration"></span>
           <Link onClick={scrollUp} to="/book">Libri</Link>

@@ -1,0 +1,34 @@
+@import '../../var.scss';
+
+#contatti{
+  text-align: center;
+  margin: 2vh 0;
+}
+
+.contatti-container{
+  display: flex;
+  flex-direction: column;
+  .contatti{
+    width: 80%;
+    background-color: $bg-slider;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 0 auto;
+    h2{
+      margin: 2vh 0;
+    }
+    p{
+      margin: 5px 0;
+      font-size: 18px;
+    }
+  }
+}
+
+
+@media all and (min-width: 1024px){
+  .contatti-container{
+    .contatti{
+      padding: 4vh 4vw;
+    }
+  }
+}

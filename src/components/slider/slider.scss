@@ -44,8 +44,7 @@
         align-items: center;
         padding: 3vh 10vw;
         width: 100%;
-        .dot {
-        }
+        
         .arrow {
           i{
             font-size: 65px;
@@ -62,7 +61,7 @@
       flex-direction: column;
       .gallery-img {
         max-width: 100%;
-        margin: 0.5vh 0;
+        margin: 1.5vh 0;
       }
     }
   }
@@ -80,12 +79,6 @@
         margin-top: 2vh;
       }
       .slider{
-        .img_description {
-        }
-        .img-container {
-          .carosello {
-          }
-        }
         .slider-comands {
           padding: 10vh 3vw;
           .dot {
@@ -94,7 +87,7 @@
             background-color: $bg-dots;
             border-radius: 50%;
             &.active {
-              background-color: aqua;
+              background-color: black;
             }
           }
           .arrow {
@@ -102,10 +95,7 @@
           }
         }
       }
-      .gallery {
-        .gallery-img {
-        }
-      }
+      
     }
   }
 }

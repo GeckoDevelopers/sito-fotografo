@@ -40,6 +40,7 @@
       background-color: $bg-color;
       display: flex;
       justify-content: space-evenly;
+      border-right: 0.5px solid $bg-slider;
       /*  
         ricorda, l'altezza ora è data dalla variabile in index
         anche per i menu a tendina l'altezza ora è data dalla variabile in index
