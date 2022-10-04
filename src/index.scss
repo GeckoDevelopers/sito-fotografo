@@ -14,6 +14,10 @@ body {
   color: $colori-scritte;
 }
 
+img{
+    pointer-events: none;
+}
+
 .container {
   width: 80%;
 }

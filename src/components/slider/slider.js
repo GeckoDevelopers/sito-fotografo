@@ -19,14 +19,14 @@ export default function Slider({data}){
   // display del carosello
   var immagine = [
 		<p className="img_description">{datas[contatore]?.text}</p>,
-		<img alt="immagine mancante" className="carosello" src={datas[contatore]?.image} />
+		<img draggable="false" alt="immagine mancante" className="carosello" src={datas[contatore]?.image} />
   ]
 
 
   // display della gallery
   var gallery = [];
 	for (let i = 0; i < datas.length; i++) {
-		gallery.push(<img alt="immagine mancante la vendetta" className="gallery-img" src={datas[i]?.image} onClick={() => getImageById(i)} />);
+		gallery.push(<img draggable="false" alt="immagine mancante la vendetta" className="gallery-img" src={datas[i]?.image} onClick={() => getImageById(i)} />);
 	}
 
   // bottone gallery/slider che cambia testo
